@@ -1,0 +1,21 @@
+{
+  "@@locale": "en",
+  "appTitle": "Sleep Universe",
+  "heading": "Sleep journal",
+  "privacy": "Sleep entries are stored on this device.",
+  "hours": "Hours",
+  "minutes": "Minutes",
+  "save": "Save sleep",
+  "history": "Recent sleep",
+  "empty": "No sleep entries yet",
+  "invalid": "Enter a duration between 1 minute and 24 hours.",
+  "total": "Recorded: {duration}",
+  "@total": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "Delete sleep entry"
+}
