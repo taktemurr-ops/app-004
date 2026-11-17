@@ -1,3 +1,4 @@
+import 'localized_integer.dart';
 class SleepEntry {
   const SleepEntry({required this.id, required this.minutes, required this.endedAt});
   final String id;
@@ -24,8 +25,8 @@ class SleepEntry {
 }
 
 int? parseSleepDuration(String hoursText, String minutesText) {
-  final hours = int.tryParse(hoursText.trim());
-  final minutes = int.tryParse(minutesText.trim());
+  final hours = parseLocalizedWholeNumber(hoursText, min: 0, max: 24);
+  final minutes = parseLocalizedWholeNumber(minutesText, min: 0, max: 59);
   if (hours == null || minutes == null || hours < 0 || minutes < 0 || minutes > 59) return null;
   final total = hours * 60 + minutes;
   return total >= 1 && total <= 1440 ? total : null;
