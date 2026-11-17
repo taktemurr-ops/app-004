@@ -1,0 +1,21 @@
+{
+  "@@locale": "tr",
+  "appTitle": "Uyku Evreni",
+  "heading": "Uyku günlüğü",
+  "privacy": "Uyku kayıtları bu cihazda saklanır.",
+  "hours": "Saat",
+  "minutes": "Dakika",
+  "save": "Uykuyu kaydet",
+  "history": "Son uyku kayıtları",
+  "empty": "Henüz uyku kaydı yok",
+  "invalid": "1 dakika ile 24 saat arasında süre girin.",
+  "total": "Kaydedilen: {duration}",
+  "@total": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "Uyku kaydını sil"
+}
