@@ -44,6 +44,15 @@ class SleepStore extends ChangeNotifier {
     await _persist();
   }
 
+  /// Deletes the on-device sleep journal after explicit user confirmation.
+  Future<void> clearAll() async {
+    final prefs = await SharedPreferences.getInstance();
+    final removed = await prefs.remove(storageKey);
+    if (!removed) throw StateError('Could not delete locally stored sleep entries');
+    _entries.clear();
+    notifyListeners();
+  }
+
   Future<void> _persist() async {
     final prefs = await SharedPreferences.getInstance();
     final ok = await prefs.setString(storageKey, jsonEncode(_entries.map((e) => e.toJson()).toList()));
