@@ -1,27 +1,14 @@
-# APP-004 — Sleep Universe
+# Uyku Günlüğü · Sleep Diary
 
-Private, offline-first sleep duration journal for Flutter Android and iOS.
+Uyku saatlerin ve düzenin · Your sleep times and rhythm
 
-## Initial implemented source
-- Enter hours and minutes (validated 1–1440 total minutes).
-- View and delete timestamped sleep records.
-- Persist entries locally using shared_preferences; malformed JSON cannot partially replace memory.
-- ARB files: English (en), Turkish (tr), Arabic (ar).
-- GitHub Actions workflow and unit tests committed.
+Sağlık ve Spor ailesinin uygulaması. Çevrimdışı çalışır; telefon, tablet ve web.
+Gerçek uygulama ortak motordadır: [saglik-motoru](https://github.com/taktemurr-ops/saglik-motoru); çatı ve
+reklam/satın alma/gizlilik: [studio-core](https://github.com/taktemurr-ops/studio-core) (`lib/apps`).
+Merkez uygulama: [merkez-saglik-ve-spor](https://github.com/taktemurr-ops/merkez-saglik-ve-spor).
 
-## Local verification
-```sh
-flutter create --platforms=android,ios .
-flutter pub get
-flutter gen-l10n
-flutter analyze
-flutter test
-flutter run
-```
+**Tıbbi cihaz değildir**; teşhis, tedavi ya da doz önermez. Her ekranda esenlik uyarısı görünür. Veriler yalnızca cihazda saklanır.
 
-Native Android/iOS scaffolding is not committed. Tests, CI and device builds are not yet verified.
-
-## Privacy and planned work
-Data is local and **not encrypted**. No login, telemetry or network sync is implemented. Future: locale-aware Unicode numeric input, sleep charts, reminders, export/delete-all, accessibility audit, consent, region-specific privacy disclosures, translated store screenshots, and optional premium features.
-
-Not a medical device and not a diagnostic sleep assessment.
+> Bu depo önceden bağımsız bir uygulamaydı (`app-004`). Sağlık ve Spor çatısına taşındı; eski
+> sürümün kodu git geçmişinde duruyor. Özellikleri motora aktarıldı (yatış/kalkış, süre, kalite, 7 gün ortalaması, yatma hatırlatması).
+> GitHub'da depo adı `uyg-uyku-gunlugu` olarak değiştirilebilir (eski adresler yönlendirilir).
